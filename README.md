@@ -1,3 +1,5 @@
-# EEBOT-MAZE-GUIDANCE-
+# EEBOT-MAZE-GUIDANCE
+
+## What This Project Is About
 
 
