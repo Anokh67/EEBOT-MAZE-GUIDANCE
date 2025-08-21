@@ -1,12 +1,10 @@
-# EEBOT-MAZE-GUIDANCE
+# EEbot Robot Guidance Project
 
-## About the Project
-For my COE538 Microprocessor Systems project, I programmed the eebot robot to navigate a maze autonomously. The robot follows a line using photoresistors, makes decisions at intersections, handles dead ends by turning around, and then learns the correct path so it can retrace it back to the start. The entire idea was to demonstrate learning behaviour: the robot explores, remembers its mistakes, and then solves the maze correctly.
+## Overview
+For this project, I programmed an EEbot robot to navigate through a maze using the HCS12 microcontroller. The goal was to make the robot follow lines, detect intersections, react to bumpers at dead ends, display information like battery voltage and state on an LCD, and even retrace the correct path once it had explored the maze. I built the logic around a finite state machine (FSM), which let the robot switch between different behaviors such as moving forward, turning, and reversing. By combining sensors, timers, and motor control, I was able to get the robot running autonomously.
 
-## Components Used
-1. HCS12 microcontroller
-2. 6 guider sensors (CdS photoresistors) for line tracking and junction detection
-3. Front and back bumpers to detect dead ends and triggers
-4. Two DC motors with PWM control for speed and direction
-5. Wheel rotation detectors for precise turning
-6. LCD for showing battery level, sensor readings, and robot state
+## What I Did
+I started by designing the robot’s behaviour as a finite state machine, allowing me to plan how it should react in various situations. After that, I wrote the control program in HCS12 assembly using CodeWarrior. I used guider sensors to follow the line path, bumpers to detect dead ends, and timer interrupts to control turning accuracy. I also set up the LCD to show the robot’s current state and battery voltage so I could easily monitor what it was doing during tests. A big part of the process was debugging—testing the robot on the track, finding issues with sensors or logic, and fixing them until the robot could reliably handle the maze and retrace its way back.
+
+## Skills, Tools, and Software
+Working on this project gave me a lot of practice with embedded systems and robotics. I got hands-on experience programming in assembly and using the EEbot platform with the HCS12 microcontroller. I learned how to design and implement a finite state machine for robot control and how to integrate sensors like line trackers, bumpers, and voltage measurement through the ADC. I also worked with timer interrupts, which were key for accurate motor control. I used the CodeWarrior IDE for coding and debugging, and I programmed the LCD to display useful information during runs. Overall, this project helped me improve my skills in embedded programming, sensor integration, hardware/software debugging, and building a complete robotic system from scratch.
